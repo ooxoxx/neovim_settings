@@ -1,0 +1,5 @@
+autoload/
+tmp/
+plugged/
+*.old.*
+.netrwhist
