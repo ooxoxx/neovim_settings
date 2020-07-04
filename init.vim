@@ -33,6 +33,7 @@ Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins', 'for' :['python', 'vim-p
 "Plug 'plytophogy/vim-virtualenv', { 'for' :['python', 'vim-plug'] }
 Plug 'tweekmonster/braceless.vim'
 Plug 'tomtom/tcomment_vim' " in <space>cn to comment a line
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 " ===
@@ -195,6 +196,12 @@ noremap <right> :vertical resize+5<CR>
 
 
 " ===================== Start of Plugin Settings =====================
+
+
+" ===
+" === tcomment_vim
+" ===
+let g:user_emmet_leader_key='<C-E>'
 
 
 " ===
