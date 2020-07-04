@@ -1,4 +1,23 @@
-
+call plug#begin()
+Plug 'mileszs/ack.vim' "search in file content using ack
+Plug 'dense-analysis/ale' "linter engine
+Plug 'jiangmiao/auto-pairs'
+Plug 'chriskempson/base16-vim' "theme
+Plug 'kien/ctrlp.vim' "fuzzy file finder
+Plug 'mattn/vim-gist' "upload to gist.github
+Plug 'preservim/nerdtree' "directory explorer
+Plug 'soft-aesthetic/soft-era-vim' "theme
+Plug 'ervandew/supertab' "completion advice using <tab>
+Plug 'tpope/vim-commentary'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'hzchirs/vim-material' "theme
+Plug 'prettier/vim-prettier' "auto wrap
+Plug 'tpope/vim-sensible' "enhanced default settings
+Plug 'tpope/vim-sleuth' "handle indent acording to old files
+Plug 'tpope/vim-surround' "handle surroudings, super useful
+Plug 'mattn/webapi-vim' "unknown utility
+call plug#end()
 
 " Indent using spaces instead of tabs
 set expandtab
