@@ -96,3 +96,6 @@ nnoremap <S-CR> :noh<CR>
 
 " Prettier
 nnoremap = :Prettier<CR>
+
+" GUI-specific configuration
+:autocmd UIEnter * source ~/.config/nvim/ginit.vim
