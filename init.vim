@@ -125,7 +125,7 @@ endfunction
 :autocmd UIEnter * command NewColor call RandomColorScheme()
 
 function RandomBase16()
-  let mycolors = split(globpath(&rtp,"**/colors/base16*.vim"),"\n")
+  let mycolors = split(globpath(&rtp,"**/colors/base16*dark*.vim"),"\n")
   exe 'so ' . mycolors[localtime() % len(mycolors)]
   unlet mycolors
 endfunction
