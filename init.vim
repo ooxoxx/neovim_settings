@@ -12,7 +12,10 @@ Plug 'tpope/vim-commentary'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'hzchirs/vim-material' "theme
-Plug 'prettier/vim-prettier' "auto wrap
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'branch': 'release/0.x'
+  \ } "auto wrap
 Plug 'tpope/vim-sensible' "enhanced default settings
 Plug 'tpope/vim-sleuth' "handle indent acording to old files
 Plug 'tpope/vim-surround' "handle surroudings, super useful
@@ -26,7 +29,7 @@ set expandtab
 set shiftwidth=2
 
 " Number of spaces to use for a <Tab> during editing operations
-set softtabstop=2"
+set softtabstop=2
 
 " so I can go up an down wrapped lines
 map j gj
@@ -41,9 +44,9 @@ map k gk
 :set nowrap
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" toggle commenting of lines with command + /
-nmap <D-/> :Commentary<CR>
-vmap <D-/> :Commentary<CR>
+" toggle commenting of lines with ctrl + /
+nmap <C-_> :Commentary<CR>
+vmap <C-_> :Commentary<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ctrlp use .gitignore
