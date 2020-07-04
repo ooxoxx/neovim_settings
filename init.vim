@@ -109,7 +109,7 @@ nnoremap = :Prettier<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Keep the error column always visible (jumpy when linter runs on input)
-:set signcolumn=yes
+:autocmd UIEnter * set signcolumn=yes
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " map Shift + F to Ack.vim
@@ -122,7 +122,7 @@ function RandomColorScheme()
   exe 'so ' . mycolors[localtime() % len(mycolors)]
   unlet mycolors
 endfunction
-:command NewColor call RandomColorScheme()
+:autocmd UIEnter * command NewColor call RandomColorScheme()
 
 function RandomBase16()
   let mycolors = split(globpath(&rtp,"**/colors/base16*.vim"),"\n")
@@ -130,10 +130,11 @@ function RandomBase16()
   unlet mycolors
 endfunction
 
-:command C call RandomBase16()
+:autocmd UIEnter * command C call RandomBase16()
 
 " Start new windows with a random color scheme
-call RandomBase16()
-" :colorscheme base16-materia
+:autocmd UIEnter * call RandomBase16()
+:set termguicolors
+:colorscheme base16-materia
 
 nnoremap ,, :C<CR>:colorscheme<CR>
