@@ -14,7 +14,6 @@ Plug 'mxw/vim-jsx'
 Plug 'hzchirs/vim-material' "theme
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
-  \ 'branch': 'release/0.x'
   \ } "auto wrap
 Plug 'tpope/vim-sensible' "enhanced default settings
 Plug 'tpope/vim-sleuth' "handle indent acording to old files
@@ -121,14 +120,14 @@ nmap <S-F> :Ack<space>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Random color schemes!
 function RandomColorScheme()
-  let mycolors = split(globpath(&rtp,"**/colors/*.vim"),"\n")
+  let mycolors = split(globpath(&rtp,"colors/*.vim"),"\n")
   exe 'so ' . mycolors[localtime() % len(mycolors)]
   unlet mycolors
 endfunction
 :autocmd UIEnter * command NewColor call RandomColorScheme()
 
 function RandomBase16()
-  let mycolors = split(globpath(&rtp,"**/colors/base16*dark*.vim"),"\n")
+  let mycolors = split(globpath(&rtp,"colors/base16*dark*.vim"),"\n")
   exe 'so ' . mycolors[localtime() % len(mycolors)]
   unlet mycolors
 endfunction
