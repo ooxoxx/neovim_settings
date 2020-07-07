@@ -36,11 +36,11 @@ map k gk
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Line numbers
-:set number
+set number
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Don't wrap lines
-:set nowrap
+set nowrap
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " toggle commenting of lines with ctrl + /
@@ -140,3 +140,7 @@ endfunction
 :colorscheme base16-materia
 
 nnoremap ,, :C<CR>:colorscheme<CR>
+
+" specify python_host entry
+let g:python_host_prog = '/usr/bin/python2'
+let g:python3_host_prog = '/usr/bin/python3'
