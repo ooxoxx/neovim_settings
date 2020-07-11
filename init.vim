@@ -144,3 +144,6 @@ nnoremap ,, :C<CR>:colorscheme<CR>
 " specify python_host entry
 let g:python_host_prog = '/usr/bin/python2'
 let g:python3_host_prog = '/usr/bin/python3'
+
+" enable mouse scroll
+set mouse=a
